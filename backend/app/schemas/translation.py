@@ -19,12 +19,12 @@ class TranslateRequest(BaseModel):
     text: str = Field(..., min_length=1, description="Text to translate.")
     source_language: str = Field(
         ..., 
-        regex=r"^[a-z]{2}$", 
+        pattern=r"^[a-z]{2}$", 
         description="ISO-639-1 code of the source language (e.g. 'en')."
     )
     target_language: str = Field(
         ..., 
-        regex=r"^[a-z]{2}$", 
+        pattern=r"^[a-z]{2}$", 
         description="ISO-639-1 code of the target language (e.g. 'fr')."
     )
 
