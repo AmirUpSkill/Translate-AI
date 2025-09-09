@@ -54,4 +54,4 @@ class STTService:
             logger.error(f"Transcription failed: {e}")
             raise HTTPException(status_code=500, detail="Transcription failed.")
 # --- Instance of this Service --- 
-sst_service = STTService()
+stt_service = STTService() 
